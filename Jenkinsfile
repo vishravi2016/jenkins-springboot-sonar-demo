@@ -13,20 +13,20 @@ pipeline {
         }
         stage('build'){
             steps{
-                bat 'mvn clean package'
+                sh 'mvn clean package'
             }
         }
 
          stage('test'){
              steps{
-                bat 'mvn test'
+                sh 'mvn test'
              }
          }
 
           stage('code anylysis with sonarqube'){
                      steps{
                          withSonarQubeEnv('SonarQube'){
-                            bat 'mvn sonar:sonar'
+                            sh 'mvn sonar:sonar'
                          }
                      }
           }
