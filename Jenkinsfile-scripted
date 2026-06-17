@@ -1,5 +1,5 @@
 node {
-    def mvnHome=tool:'Maven-3'
+    def mvnHome=tool 'Maven-3'
 
     stage('checkout'){
         git branch: 'main',
