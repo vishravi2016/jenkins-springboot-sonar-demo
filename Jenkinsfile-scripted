@@ -1,0 +1,22 @@
+node {
+    def mvnHome=tool:'Maven-3'
+
+    stage('checkout'){
+        git branch: 'main',
+            url: 'https://github.com/vishravi2016/jenkins-springboot-sonar-demo.git'
+
+
+    }
+
+    stage('build'){
+        sh '${mvnHome}/bin/mvn clean package
+
+    }
+
+    stage('test'){
+         sh '${mvnHome}/bin/mvn test
+
+    }
+
+
+}
