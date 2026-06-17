@@ -9,12 +9,12 @@ node {
     }
 
     stage('build'){
-        sh '${mvnHome}/bin/mvn clean package
+        sh '${mvnHome}/bin/mvn clean package'
 
     }
 
     stage('test'){
-         sh '${mvnHome}/bin/mvn test
+         sh '${mvnHome}/bin/mvn test'
 
     }
 
