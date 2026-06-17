@@ -25,7 +25,7 @@ pipeline {
 
           stage('code anylysis with sonarqube'){
                      steps{
-                         withSonarQubeEnv('SonarQube'){
+                         withSonarQubeEnv('SonarScanner'){
                             sh 'mvn sonar:sonar'
                          }
                      }
