@@ -8,6 +8,8 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String sayHello(){
+        int x=10,y=20;
+        int z=x+y;
         return "Welcome to DevOps world!";
     }
 }
